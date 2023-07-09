@@ -1,3 +1,6 @@
 [submodule "repos/features"]
 	path = repos/features
 	url = https://github.com/devcontainers/features
+[submodule "repos/ocaml-feature"]
+	path = repos/ocaml-feature
+	url = https://github.com/avsm/ocaml-devcontainers-feature

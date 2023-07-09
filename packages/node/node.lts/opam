@@ -1,0 +1,16 @@
+
+opam-version: "2.0"
+synopsis: "Node.js (via nvm), yarn and pnpm"
+description: "Installs Node.js, nvm, yarn, pnpm, and needed dependencies."
+homepage: "https://github.com/devcontainers/features/tree/main/src/node"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "NODE_GYP_DEPENDENCIES=%{node-node-gyp-dependencies:version}%" {node-node-gyp-dependencies:installed}
+  "NVM_INSTALL_PATH=%{node-nvm-install-path:version}%" {node-nvm-install-path:installed}
+  "NVM_VERSION=%{node-nvm-version:version}%" {node-nvm-version:installed}
+  "bash" "./src/node/install.sh"
+]
+depopts: [ "node-node-gyp-dependencies" "node-nvm-install-path" "node-nvm-version" ]
+url { src: "git+https://github.com/devcontainers/features" }

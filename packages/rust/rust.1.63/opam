@@ -1,0 +1,14 @@
+
+opam-version: "2.0"
+synopsis: "Rust"
+description: "Installs Rust, common Rust utilities, and their required dependencies"
+homepage: "https://github.com/devcontainers/features/tree/main/src/rust"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "PROFILE=%{rust-profile:version}%" {rust-profile:installed}
+  "bash" "./src/rust/install.sh"
+]
+depopts: [ "rust-profile" ]
+url { src: "git+https://github.com/devcontainers/features" }

@@ -1,0 +1,15 @@
+
+opam-version: "2.0"
+synopsis: "Azure CLI"
+description: "Installs the Azure CLI along with needed dependencies. Useful for base Dockerfiles that often are missing required install dependencies like gpg."
+homepage: "https://github.com/devcontainers/features/tree/main/src/azure-cli"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "EXTENSIONS=%{azure-cli-extensions:version}%" {azure-cli-extensions:installed}
+  "INSTALL_BICEP=%{azure-cli-install-bicep:version}%" {azure-cli-install-bicep:installed}
+  "bash" "./src/azure-cli/install.sh"
+]
+depopts: [ "azure-cli-extensions" "azure-cli-install-bicep" ]
+url { src: "git+https://github.com/devcontainers/features" }

@@ -1,0 +1,14 @@
+
+opam-version: "2.0"
+synopsis: "PowerShell"
+description: "Installs PowerShell along with needed dependencies. Useful for base Dockerfiles that often are missing required install dependencies like gpg."
+homepage: "https://github.com/devcontainers/features/tree/main/src/powershell"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "MODULES=%{powershell-modules:version}%" {powershell-modules:installed}
+  "bash" "./src/powershell/install.sh"
+]
+depopts: [ "powershell-modules" ]
+url { src: "git+https://github.com/devcontainers/features" }

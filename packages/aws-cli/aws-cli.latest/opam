@@ -1,0 +1,14 @@
+
+opam-version: "2.0"
+synopsis: "AWS CLI"
+description: "Installs the AWS CLI along with needed dependencies. Useful for base Dockerfiles that often are missing required install dependencies like gpg."
+homepage: "https://github.com/devcontainers/features/tree/main/src/aws-cli"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  # no options for this package
+  "bash" "./src/aws-cli/install.sh"
+]
+depopts: [  ]
+url { src: "git+https://github.com/devcontainers/features" }
