@@ -1,0 +1,4 @@
+
+opam-version: "2.0"
+synopsis: "Select the `none` helm option for dev-kubectl-helm-minikube"
+depends: [ ]

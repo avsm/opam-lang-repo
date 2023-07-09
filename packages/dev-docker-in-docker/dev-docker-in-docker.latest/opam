@@ -1,0 +1,18 @@
+
+opam-version: "2.0"
+synopsis: "Docker (Docker-in-Docker)"
+description: "Create child containers *inside* a container, independent from the host's docker instance. Installs Docker extension in the container along with needed CLIs."
+homepage: "https://github.com/devcontainers/features/tree/main/src/docker-in-docker"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "MOBY=%{dev-docker-in-docker-moby:version}%" {dev-docker-in-docker-moby:installed}
+  "DOCKER_DASH_COMPOSE_VERSION=%{dev-docker-in-docker-docker-dash-compose-version:version}%" {dev-docker-in-docker-docker-dash-compose-version:installed}
+  "AZURE_DNS_AUTO_DETECTION=%{dev-docker-in-docker-azure-dns-auto-detection:version}%" {dev-docker-in-docker-azure-dns-auto-detection:installed}
+  "DOCKER_DEFAULT_ADDRESS_POOL=%{dev-docker-in-docker-docker-default-address-pool:version}%" {dev-docker-in-docker-docker-default-address-pool:installed}
+  "INSTALL_DOCKER_BUILDX=%{dev-docker-in-docker-install-docker-buildx:version}%" {dev-docker-in-docker-install-docker-buildx:installed}
+  "bash" "./src/docker-in-docker/install.sh"
+]
+depopts: [ "dev-docker-in-docker-moby" "dev-docker-in-docker-docker-dash-compose-version" "dev-docker-in-docker-azure-dns-auto-detection" "dev-docker-in-docker-docker-default-address-pool" "dev-docker-in-docker-install-docker-buildx" ]
+url { src: "git+https://github.com/devcontainers/features" }

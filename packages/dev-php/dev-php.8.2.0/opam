@@ -1,0 +1,14 @@
+
+opam-version: "2.0"
+synopsis: "PHP"
+description: "The php devcontainer image"
+homepage: "https://github.com/devcontainers/features/tree/main/src/php"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "INSTALL_COMPOSER=%{dev-php-install-composer:version}%" {dev-php-install-composer:installed}
+  "bash" "./src/php/install.sh"
+]
+depopts: [ "dev-php-install-composer" ]
+url { src: "git+https://github.com/devcontainers/features" }

@@ -1,0 +1,14 @@
+
+opam-version: "2.0"
+synopsis: "OCaml"
+description: "Install the OCaml compiler and associated tools."
+homepage: "https://devcontainers.io"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "FLAMBDA=%{dev-ocaml-flambda:version}%" {dev-ocaml-flambda:installed}
+  "bash" "./src/ocaml/install.sh"
+]
+depopts: [ "dev-ocaml-flambda" ]
+url { src: "git+https://github.com/avsm/ocaml-devcontainers-feature" }

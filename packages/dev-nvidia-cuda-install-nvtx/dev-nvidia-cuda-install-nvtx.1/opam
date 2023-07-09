@@ -1,0 +1,4 @@
+
+opam-version: "2.0"
+synopsis: "Select the `1` installNvtx option for dev-nvidia-cuda"
+depends: [ ]

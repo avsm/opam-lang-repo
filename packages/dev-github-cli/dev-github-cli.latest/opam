@@ -1,0 +1,14 @@
+
+opam-version: "2.0"
+synopsis: "GitHub CLI"
+description: "Installs the GitHub CLI. Auto-detects latest version and installs needed dependencies."
+homepage: "https://github.com/devcontainers/features/tree/main/src/github-cli"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "INSTALL_DIRECTLY_FROM_GIT_HUB_RELEASE=%{dev-github-cli-install-directly-from-git-hub-release:version}%" {dev-github-cli-install-directly-from-git-hub-release:installed}
+  "bash" "./src/github-cli/install.sh"
+]
+depopts: [ "dev-github-cli-install-directly-from-git-hub-release" ]
+url { src: "git+https://github.com/devcontainers/features" }

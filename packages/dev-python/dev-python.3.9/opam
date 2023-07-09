@@ -1,0 +1,19 @@
+
+opam-version: "2.0"
+synopsis: "Python"
+description: "Installs the provided version of Python, as well as PIPX, and other common Python utilities.  JupyterLab is conditionally installed with the python feature. Note: May require source code compilation."
+homepage: "https://github.com/devcontainers/features/tree/main/src/python"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "INSTALL_TOOLS=%{dev-python-install-tools:version}%" {dev-python-install-tools:installed}
+  "OPTIMIZE=%{dev-python-optimize:version}%" {dev-python-optimize:installed}
+  "INSTALL_PATH=%{dev-python-install-path:version}%" {dev-python-install-path:installed}
+  "INSTALL_JUPYTERLAB=%{dev-python-install-jupyterlab:version}%" {dev-python-install-jupyterlab:installed}
+  "CONFIGURE_JUPYTERLAB_ALLOW_ORIGIN=%{dev-python-configure-jupyterlab-allow-origin:version}%" {dev-python-configure-jupyterlab-allow-origin:installed}
+  "HTTP_PROXY=%{dev-python-http-proxy:version}%" {dev-python-http-proxy:installed}
+  "bash" "./src/python/install.sh"
+]
+depopts: [ "dev-python-install-tools" "dev-python-optimize" "dev-python-install-path" "dev-python-install-jupyterlab" "dev-python-configure-jupyterlab-allow-origin" "dev-python-http-proxy" ]
+url { src: "git+https://github.com/devcontainers/features" }

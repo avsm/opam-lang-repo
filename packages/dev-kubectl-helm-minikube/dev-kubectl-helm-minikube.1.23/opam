@@ -1,0 +1,15 @@
+
+opam-version: "2.0"
+synopsis: "Kubectl, Helm, and Minikube"
+description: "Installs latest version of kubectl, Helm, and optionally minikube. Auto-detects latest versions and installs needed dependencies."
+homepage: "https://github.com/devcontainers/features/tree/main/src/kubectl-helm-minikube"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "HELM=%{dev-kubectl-helm-minikube-helm:version}%" {dev-kubectl-helm-minikube-helm:installed}
+  "MINIKUBE=%{dev-kubectl-helm-minikube-minikube:version}%" {dev-kubectl-helm-minikube-minikube:installed}
+  "bash" "./src/kubectl-helm-minikube/install.sh"
+]
+depopts: [ "dev-kubectl-helm-minikube-helm" "dev-kubectl-helm-minikube-minikube" ]
+url { src: "git+https://github.com/devcontainers/features" }

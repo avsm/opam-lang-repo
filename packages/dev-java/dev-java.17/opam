@@ -1,0 +1,20 @@
+
+opam-version: "2.0"
+synopsis: "Java (via SDKMAN!)"
+description: "Installs Java, SDKMAN! (if not installed), and needed dependencies."
+homepage: "https://github.com/devcontainers/features/tree/main/src/java"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "JDK_DISTRO=%{dev-java-jdk-distro:version}%" {dev-java-jdk-distro:installed}
+  "INSTALL_GRADLE=%{dev-java-install-gradle:version}%" {dev-java-install-gradle:installed}
+  "GRADLE_VERSION=%{dev-java-gradle-version:version}%" {dev-java-gradle-version:installed}
+  "INSTALL_MAVEN=%{dev-java-install-maven:version}%" {dev-java-install-maven:installed}
+  "MAVEN_VERSION=%{dev-java-maven-version:version}%" {dev-java-maven-version:installed}
+  "INSTALL_ANT=%{dev-java-install-ant:version}%" {dev-java-install-ant:installed}
+  "ANT_VERSION=%{dev-java-ant-version:version}%" {dev-java-ant-version:installed}
+  "bash" "./src/java/install.sh"
+]
+depopts: [ "dev-java-jdk-distro" "dev-java-install-gradle" "dev-java-gradle-version" "dev-java-install-maven" "dev-java-maven-version" "dev-java-install-ant" "dev-java-ant-version" ]
+url { src: "git+https://github.com/devcontainers/features" }

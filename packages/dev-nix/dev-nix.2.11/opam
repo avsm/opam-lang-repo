@@ -1,0 +1,17 @@
+
+opam-version: "2.0"
+synopsis: "Nix Package Manager"
+description: "Installs the Nix package manager and optionally a set of packages."
+homepage: "https://github.com/devcontainers/features/tree/main/src/nix"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "MULTI_USER=%{dev-nix-multi-user:version}%" {dev-nix-multi-user:installed}
+  "PACKAGES=%{dev-nix-packages:version}%" {dev-nix-packages:installed}
+  "FLAKE_URI=%{dev-nix-flake-uri:version}%" {dev-nix-flake-uri:installed}
+  "EXTRA_NIX_CONFIG=%{dev-nix-extra-nix-config:version}%" {dev-nix-extra-nix-config:installed}
+  "bash" "./src/nix/install.sh"
+]
+depopts: [ "dev-nix-multi-user" "dev-nix-packages" "dev-nix-flake-uri" "dev-nix-extra-nix-config" ]
+url { src: "git+https://github.com/devcontainers/features" }

@@ -1,0 +1,15 @@
+
+opam-version: "2.0"
+synopsis: "Dotnet CLI"
+description: "Installs the .NET CLI. Provides option of installing sdk or runtime, and option of versions to install. Uses latest version of .NET sdk as defaults to install."
+homepage: "https://github.com/devcontainers/features/tree/main/src/dotnet"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "RUNTIME_ONLY=%{dev-dotnet-runtime-only:version}%" {dev-dotnet-runtime-only:installed}
+  "INSTALL_USING_APT=%{dev-dotnet-install-using-apt:version}%" {dev-dotnet-install-using-apt:installed}
+  "bash" "./src/dotnet/install.sh"
+]
+depopts: [ "dev-dotnet-runtime-only" "dev-dotnet-install-using-apt" ]
+url { src: "git+https://github.com/devcontainers/features" }

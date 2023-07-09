@@ -1,0 +1,19 @@
+
+opam-version: "2.0"
+synopsis: "Terraform, tflint, and TFGrunt"
+description: "Installs the Terraform CLI and optionally TFLint and Terragrunt. Auto-detects latest version and installs needed dependencies."
+homepage: "https://github.com/devcontainers/features/tree/main/src/terraform"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "TFLINT=%{dev-terraform-tflint:version}%" {dev-terraform-tflint:installed}
+  "TERRAGRUNT=%{dev-terraform-terragrunt:version}%" {dev-terraform-terragrunt:installed}
+  "INSTALL_SENTINEL=%{dev-terraform-install-sentinel:version}%" {dev-terraform-install-sentinel:installed}
+  "INSTALL_T_FSEC=%{dev-terraform-install-t-fsec:version}%" {dev-terraform-install-t-fsec:installed}
+  "INSTALL_TERRAFORM_DOCS=%{dev-terraform-install-terraform-docs:version}%" {dev-terraform-install-terraform-docs:installed}
+  "HTTP_PROXY=%{dev-terraform-http-proxy:version}%" {dev-terraform-http-proxy:installed}
+  "bash" "./src/terraform/install.sh"
+]
+depopts: [ "dev-terraform-tflint" "dev-terraform-terragrunt" "dev-terraform-install-sentinel" "dev-terraform-install-t-fsec" "dev-terraform-install-terraform-docs" "dev-terraform-http-proxy" ]
+url { src: "git+https://github.com/devcontainers/features" }

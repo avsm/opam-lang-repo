@@ -1,0 +1,4 @@
+
+opam-version: "2.0"
+synopsis: "Select the `vscode` password option for dev-desktop-lite"
+depends: [ ]

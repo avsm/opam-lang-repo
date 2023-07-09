@@ -1,0 +1,17 @@
+
+opam-version: "2.0"
+synopsis: "Light-weight Desktop"
+description: "Adds a lightweight Fluxbox based desktop to the container that can be accessed using a VNC viewer or the web. GUI-based commands executed from the built-in VS code terminal will open on the desktop automatically."
+homepage: "https://github.com/devcontainers/features/tree/main/src/desktop-lite"
+depends: [ ]
+install: [
+  "env"
+  "VERSION=%{version}%"
+  "NO_VNC_VERSION=%{dev-desktop-lite-no-vnc-version:version}%" {dev-desktop-lite-no-vnc-version:installed}
+  "PASSWORD=%{dev-desktop-lite-password:version}%" {dev-desktop-lite-password:installed}
+  "WEB_PORT=%{dev-desktop-lite-web-port:version}%" {dev-desktop-lite-web-port:installed}
+  "VNC_PORT=%{dev-desktop-lite-vnc-port:version}%" {dev-desktop-lite-vnc-port:installed}
+  "bash" "./src/desktop-lite/install.sh"
+]
+depopts: [ "dev-desktop-lite-no-vnc-version" "dev-desktop-lite-password" "dev-desktop-lite-web-port" "dev-desktop-lite-vnc-port" ]
+url { src: "git+https://github.com/devcontainers/features" }
