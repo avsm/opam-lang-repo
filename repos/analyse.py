@@ -41,7 +41,7 @@ def get_submodule_url(repo_path, submodule_path):
 def option_to_opam_env(lang, option):
   env = feature_to_env(option)
   pkg = feature_to_opam_option(option)
-  s = "\"{env}=%{{{lang}-{pkg}:version}}%\" {{{lang}-{pkg}:installed}}"
+  s = "\"{env}=%{{dev-{lang}-{pkg}:version}}%\" {{dev-{lang}-{pkg}:installed}}"
   return s.format(lang=lang, env=env, pkg=pkg)
 
 def create_opam_file(lang, args):
@@ -55,22 +55,24 @@ def create_opam_file(lang, args):
     pkg_dir=""
     template = """
 opam-version: "2.0"
-synopsis: "Select the `{version}` {option} option for {lang}"
+synopsis: "Select the `{version}` {option} option for dev-{lang}"
 depends: [ ]
 """
     if val['type'] == 'string':
       vs = val.get('proposals',val.get('enum',[]));
       if vs == []:
         vs = [val.get('default')]
+      if vs == [""]:
+        vs = []
       for version in vs:
-        pkg_dir = f"packages/{lang}-{option_name}/{lang}-{option_name}.{version}/"
+        pkg_dir = f"packages/dev-{lang}-{option_name}/dev-{lang}-{option_name}.{version}/"
         opam_option = template.format(lang=lang, option=option, version=version)
         os.makedirs(pkg_dir, exist_ok=True)
         with open(f"{pkg_dir}/opam", "w") as f: 
           f.write(opam_option)
     elif val['type'] == 'boolean':
       version = "1"
-      pkg_dir = f"packages/{lang}-{option_name}/{lang}-{option_name}.{version}/"
+      pkg_dir = f"packages/dev-{lang}-{option_name}/dev-{lang}-{option_name}.{version}/"
       opam_option = template.format(lang=lang, option=option, version=version)
       os.makedirs(pkg_dir, exist_ok=True)
       with open(f"{pkg_dir}/opam", "w") as f: 
@@ -81,7 +83,7 @@ depends: [ ]
     option_vars = "\n  ".join(option_entries)
   else:
     option_vars = "# no options for this package"
-  option_depopts = " ".join(list(map(lambda o : "\""+lang+"-"+feature_to_opam_option(o)+'"', options.keys())))
+  option_depopts = " ".join(list(map(lambda o : "\"dev-"+lang+"-"+feature_to_opam_option(o)+'"', options.keys())))
   synopsis = args.get('name', f"The {lang} devcontainer")
   description = args.get('description', f"The {lang} devcontainer image")
   homepage = args.get('documentationURL', "https://devcontainers.io")
@@ -102,7 +104,7 @@ url {{ src: "git+{repo_url}" }}
 """
   opam_file_content = template.format(synopsis=synopsis, homepage=homepage,description=description,option_vars=option_vars, option_depopts=option_depopts, lang=lang, repo_url=args['repo_url'])
   for version in versions:
-    dir_path = f"packages/{lang}/{lang}.{version}"
+    dir_path = f"packages/dev-{lang}/dev-{lang}.{version}"
     os.makedirs(dir_path, exist_ok=True)
     with open(f"{dir_path}/opam", "w") as f:
       f.write(opam_file_content)
