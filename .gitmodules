@@ -1,0 +1,3 @@
+[submodule "repos/features"]
+	path = repos/features
+	url = https://github.com/devcontainers/features
