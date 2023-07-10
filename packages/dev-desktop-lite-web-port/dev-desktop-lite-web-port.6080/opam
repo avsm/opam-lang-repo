@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `6080` webPort option for dev-desktop-lite"
+synopsis: "Enter a port for the VNC web client"
+description: "Installing this package selects the `6080` webPort option for dev-desktop-lite."
+homepage: "https://github.com/devcontainers/features/tree/main/src/desktop-lite"
 depends: [ ]

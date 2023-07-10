@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installCudnn option for dev-nvidia-cuda"
+synopsis: "Additionally install CUDA Deep Neural Network (cuDNN) shared library"
+description: "Installing this package selects the `1` installCudnn option for dev-nvidia-cuda."
+homepage: "https://github.com/devcontainers/features/tree/main/src/nvidia-cuda"
 depends: [ ]

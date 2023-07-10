@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installTFsec option for dev-terraform"
+synopsis: "Install tfsec, a tool to spot potential misconfigurations for your terraform code"
+description: "Installing this package selects the `1` installTFsec option for dev-terraform."
+homepage: "https://github.com/devcontainers/features/tree/main/src/terraform"
 depends: [ ]

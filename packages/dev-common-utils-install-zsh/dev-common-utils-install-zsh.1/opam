@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installZsh option for dev-common-utils"
+synopsis: "Install ZSH?"
+description: "Installing this package selects the `1` installZsh option for dev-common-utils."
+homepage: "https://github.com/devcontainers/features/tree/main/src/common-utils"
 depends: [ ]

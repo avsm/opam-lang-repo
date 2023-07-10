@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` autoPull option for dev-git-lfs"
+synopsis: "Automatically pull LFS files when creating the container.  When false, running 'git lfs pull' in the container will have the same effect."
+description: "Installing this package selects the `1` autoPull option for dev-git-lfs."
+homepage: "https://github.com/devcontainers/features/tree/main/src/git-lfs"
 depends: [ ]

@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `open` jdkDistro option for dev-java"
+synopsis: "Select or enter a JDK distribution"
+description: "Installing this package selects the `open` jdkDistro option for dev-java."
+homepage: "https://github.com/devcontainers/features/tree/main/src/java"
 depends: [ ]

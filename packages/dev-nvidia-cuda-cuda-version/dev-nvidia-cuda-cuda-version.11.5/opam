@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `11.5` cudaVersion option for dev-nvidia-cuda"
+synopsis: "Version of CUDA to install"
+description: "Installing this package selects the `11.5` cudaVersion option for dev-nvidia-cuda."
+homepage: "https://github.com/devcontainers/features/tree/main/src/nvidia-cuda"
 depends: [ ]

@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` runtimeOnly option for dev-dotnet"
+synopsis: "Install just the dotnet runtime if true, and sdk if false."
+description: "Installing this package selects the `1` runtimeOnly option for dev-dotnet."
+homepage: "https://github.com/devcontainers/features/tree/main/src/dotnet"
 depends: [ ]

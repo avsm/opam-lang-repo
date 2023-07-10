@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` nodeGypDependencies option for dev-node"
+synopsis: "Install dependencies to compile native node modules (node-gyp)?"
+description: "Installing this package selects the `1` nodeGypDependencies option for dev-node."
+homepage: "https://github.com/devcontainers/features/tree/main/src/node"
 depends: [ ]

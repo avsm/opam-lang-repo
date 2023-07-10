@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `latest` helm option for dev-kubectl-helm-minikube"
+synopsis: "Select or enter a Helm version to install"
+description: "Installing this package selects the `latest` helm option for dev-kubectl-helm-minikube."
+homepage: "https://github.com/devcontainers/features/tree/main/src/kubectl-helm-minikube"
 depends: [ ]

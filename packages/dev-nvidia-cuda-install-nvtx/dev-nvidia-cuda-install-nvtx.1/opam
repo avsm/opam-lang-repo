@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installNvtx option for dev-nvidia-cuda"
+synopsis: "Additionally install NVIDIA Tools Extension (NVTX)"
+description: "Installing this package selects the `1` installNvtx option for dev-nvidia-cuda."
+homepage: "https://github.com/devcontainers/features/tree/main/src/nvidia-cuda"
 depends: [ ]

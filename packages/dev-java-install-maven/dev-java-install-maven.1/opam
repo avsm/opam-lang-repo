@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installMaven option for dev-java"
+synopsis: "Install Maven, a management tool for Java"
+description: "Installing this package selects the `1` installMaven option for dev-java."
+homepage: "https://github.com/devcontainers/features/tree/main/src/java"
 depends: [ ]

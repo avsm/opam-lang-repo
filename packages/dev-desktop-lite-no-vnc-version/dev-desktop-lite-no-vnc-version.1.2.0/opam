@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1.2.0` noVncVersion option for dev-desktop-lite"
+synopsis: "NoVnc Version"
+description: "Installing this package selects the `1.2.0` noVncVersion option for dev-desktop-lite."
+homepage: "https://github.com/devcontainers/features/tree/main/src/desktop-lite"
 depends: [ ]

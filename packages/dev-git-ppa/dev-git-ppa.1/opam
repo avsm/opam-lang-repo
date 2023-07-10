@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` ppa option for dev-git"
+synopsis: "Install from PPA if available"
+description: "Installing this package selects the `1` ppa option for dev-git."
+homepage: "https://github.com/devcontainers/features/tree/main/src/git"
 depends: [ ]

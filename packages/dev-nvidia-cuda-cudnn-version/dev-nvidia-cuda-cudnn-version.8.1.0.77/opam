@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `8.1.0.77` cudnnVersion option for dev-nvidia-cuda"
+synopsis: "Version of cuDNN to install"
+description: "Installing this package selects the `8.1.0.77` cudnnVersion option for dev-nvidia-cuda."
+homepage: "https://github.com/devcontainers/features/tree/main/src/nvidia-cuda"
 depends: [ ]

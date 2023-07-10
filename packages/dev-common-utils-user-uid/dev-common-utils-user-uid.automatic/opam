@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `automatic` userUid option for dev-common-utils"
+synopsis: "Enter UID for non-root user"
+description: "Installing this package selects the `automatic` userUid option for dev-common-utils."
+homepage: "https://github.com/devcontainers/features/tree/main/src/common-utils"
 depends: [ ]

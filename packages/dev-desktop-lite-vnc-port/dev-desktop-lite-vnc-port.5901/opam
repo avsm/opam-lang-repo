@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `5901` vncPort option for dev-desktop-lite"
+synopsis: "Enter a port for the desktop VNC server"
+description: "Installing this package selects the `5901` vncPort option for dev-desktop-lite."
+homepage: "https://github.com/devcontainers/features/tree/main/src/desktop-lite"
 depends: [ ]

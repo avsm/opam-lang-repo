@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installUsingApt option for dev-dotnet"
+synopsis: "If true, it installs using apt instead of the release URL"
+description: "Installing this package selects the `1` installUsingApt option for dev-dotnet."
+homepage: "https://github.com/devcontainers/features/tree/main/src/dotnet"
 depends: [ ]

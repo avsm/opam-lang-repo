@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `default` profile option for dev-rust"
+synopsis: "Select a rustup install profile."
+description: "Installing this package selects the `default` profile option for dev-rust."
+homepage: "https://github.com/devcontainers/features/tree/main/src/rust"
 depends: [ ]

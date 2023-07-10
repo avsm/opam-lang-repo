@@ -64,4 +64,5 @@ worthy:
   could be used to pass in values, but opam can't recompile if these
   variables change. Dune does support systematic env variable tracking
   and recompile if it changes, so this would work in a monorepo.
+- [ ] extract feature dependencies into the opam formula as well.
 - [ ] something, something, Nix?

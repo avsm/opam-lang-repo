@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `none` dockerDashComposeVersion option for dev-docker-in-docker"
+synopsis: "Default version of Docker Compose (v1 or v2 or none)"
+description: "Installing this package selects the `none` dockerDashComposeVersion option for dev-docker-in-docker."
+homepage: "https://github.com/devcontainers/features/tree/main/src/docker-in-docker"
 depends: [ ]

@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` installDockerBuildx option for dev-docker-outside-of-docker"
+synopsis: "Install Docker Buildx"
+description: "Installing this package selects the `1` installDockerBuildx option for dev-docker-outside-of-docker."
+homepage: "https://github.com/devcontainers/features/tree/main/src/docker-outside-of-docker"
 depends: [ ]

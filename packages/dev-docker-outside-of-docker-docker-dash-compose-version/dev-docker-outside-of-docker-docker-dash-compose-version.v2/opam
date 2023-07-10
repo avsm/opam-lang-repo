@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `v2` dockerDashComposeVersion option for dev-docker-outside-of-docker"
+synopsis: "Compose version to use for docker-compose (v1 or v2 or none)"
+description: "Installing this package selects the `v2` dockerDashComposeVersion option for dev-docker-outside-of-docker."
+homepage: "https://github.com/devcontainers/features/tree/main/src/docker-outside-of-docker"
 depends: [ ]

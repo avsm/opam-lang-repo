@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `1` extended option for dev-hugo"
+synopsis: "Install Hugo extended for SASS/SCSS changes"
+description: "Installing this package selects the `1` extended option for dev-hugo."
+homepage: "https://github.com/devcontainers/features/tree/main/src/hugo"
 depends: [ ]

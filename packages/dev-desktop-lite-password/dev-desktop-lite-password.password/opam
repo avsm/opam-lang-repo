@@ -1,4 +1,6 @@
 
 opam-version: "2.0"
-synopsis: "Select the `password` password option for dev-desktop-lite"
+synopsis: "Enter a password for desktop connections"
+description: "Installing this package selects the `password` password option for dev-desktop-lite."
+homepage: "https://github.com/devcontainers/features/tree/main/src/desktop-lite"
 depends: [ ]
