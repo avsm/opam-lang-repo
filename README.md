@@ -66,3 +66,10 @@ worthy:
   and recompile if it changes, so this would work in a monorepo.
 - [ ] extract feature dependencies into the opam formula as well.
 - [ ] something, something, Nix?
+
+# How it works
+
+Pretty simple: we track feature repositories as submodules in this
+repository, and then run `repos/analyse.py` to autogenerate the
+opam `packages/` directory from the metadata contained in the
+feature repositories.
